@@ -50,3 +50,19 @@
 .cadastro:hover {
     background-color: var(--dourado-nobre);
 }
+
+.container {
+    display: flex;
+}
+
+.fundo {
+    display: flex;
+    border-bottom: 10px solid var(--dourado-nobre);
+}
+
+.titulo-img {
+    margin-left: -1000px;
+    margin-top: 40px;
+    color: #D1D5DB;
+    font-size: 38px;
+}
