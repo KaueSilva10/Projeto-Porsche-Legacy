@@ -1,9 +1,8 @@
 window.addEventListener('scroll', function() {
-    let navbar = document.querySelector('.navbar');
-    if (window.scrollY > 650) {
-        navbar.classList.remove('transparente');
+    let header = document.querySelector('.header');
+    if (window.scrollY > 550) {
+        header.classList.remove('transparente');
     } else {
-        navbar.classList.add('transparente');
+        header.classList.add('transparente');
     }
-}
-)
+});
