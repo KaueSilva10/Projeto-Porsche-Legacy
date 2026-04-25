@@ -22,61 +22,12 @@ body {
 }
 
 .header .navbar {
-    background-color: #000; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
     transition: background-color, border-bottom 0.4s ease-in-out, padding 0.4s ease-in-out;
-    border-bottom: 4px solid var(--dourado-nobre);
 }
 
 .header.transparente .navbar {
     background-color: rgba(0, 0, 0, 0); 
     border-bottom: none;
-}
-
-.navbar ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-.navbar ul li a {
-    color: var(--prata-metalico);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: var(--dourado-nobre);
-}
-
-.items-navbar {
-    padding: 6px 16px;
-    border-radius: 5px;
-}
-
-.login {
-    background-color: var(--vermelho-guards);
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.login:hover {
-    background-color: var(--dourado-nobre);
 }
 
 .banner {

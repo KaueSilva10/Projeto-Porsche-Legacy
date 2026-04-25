@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/navbar.css">
+    <link rel="stylesheet" href="/assets/login.css">
+    <title>Porsche Legacy | Login</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/img/porschelogo.png" alt="" height="40px"></a>
+            </div>
+            <ul>
+                <li><a class="items-navbar" href="/quiz.html">Quiz</a></li>
+                <li><a class="items-navbar" href="/sobre.html">Sobre</a></li>
+                <li style="color: #D1D5DB;">|</li>
+                <li><a href="/login.html"><button class="login">Login</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="title">Faça o seu login</h2>
+            <div class="campos">
+                <div class="inputs-cadastro">
+                    <h4>Seu email:</h4>
+                    <input type="email" id="ipt_email" placeholder="seuemail@.com" required>
+                </div>
+                <div class="inputs-cadastro">
+                    <h4>Digite sua senha:</h4>
+                    <input type="password" id="ipt_senha" placeholder="******" required>
+                </div>
+                <div class="btn-cadastrar">
+                    <button onclick="cadastro()">Login</button>
+                </div>
+            </div>
+            <span class="possui">Não tem uma conta?<a href="/cadastro.html">Cadastrar-se</a></span>
+        </div>
+    </div>
+    
+    <script src="/assets/script.js"></script>
+</body>
+</html>
