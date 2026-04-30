@@ -1,4 +1,5 @@
 let login = false;
+let btnLogin = `<i class="fa-solid fa-circle-user"></i>`;
 
 function cadastro() {
     let nome = document.getElementById('ipt_nome').value;
@@ -21,5 +22,6 @@ function cadastro() {
 
     if (login) {
         window.location.href = "login.html";
+        btn_login.innerHTML = btnLogin;
     }
 }

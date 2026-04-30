@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Legacy | Modelos</title>
+    <link rel="stylesheet" href="/assets/navbar.css">
+    <link rel="stylesheet" href="/assets/modelos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/img/porschelogo.png" alt="" height="40px"></a>
+            </div>
+            <ul>
+                <li><a class="items-navbar" href="/quiz.html">Quiz</a></li>
+                <li><a class="items-navbar" href="/modelos.html" style="color: var(--dourado-nobre);">Modelos</a></li>
+                <li><a class="items-navbar" href="/sobre.html">Sobre</a></li>
+                <li style="color: #D1D5DB;">|</li>
+                <li><a href="/login.html"><button class="login">Login</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+    <div class="secao-superior">
+        <div class="img-modelo-container">
+            <img id="img_porsche" src="">
+        </div>
+
+        <div class="controles-modelo">
+            <div class="titulo-modelo">
+                <h1>Selecione um Modelo</h1>
+            </div>
+            <div class="selecao-modelo">
+                <select id="slct_modelo" onchange="mudarModelo()">
+                    <option value="" selected disabled>Escolha o Modelo</option>
+                    <option value="1">Porsche 356</option>
+                    <option value="2">Porsche 911</option>
+                    <option value="3">Porsche 912</option>
+                <option value="4">Porsche 944</option>
+                <option value="5">Porsche 959</option>
+                <option value="6">Porsche Carrera GT</option>
+                <option value="7">Porsche Cayenne</option>
+                <option value="8">Porsche Taycan</option>
+                    </select>
+            </div>
+            <div class="ano-lancamento">
+                <h3 id="h3_ano">LANÇAMENTO: XX</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-textos">
+        <div class="card-texto">
+            <h4>HISTÓRIA</h4>
+            <p id="p_historia"></p>
+        </div>
+        <div class="card-texto">
+            <h4>INTUITO</h4>
+            <p id="p_intuito"></p>
+        </div>
+    </div>
+</div>
+    </div>
+    
+
+    <script src="/assets/modelos.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root {
+    --preto-profundo: #111827;
+    --prata-metalico: #D1D5DB;
+    --vermelho-guards: #BA122B;
+    --dourado-nobre: #A6894A;
+    --branco-fundo: #fcfcfc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--branco-fundo);
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    padding-top: 80px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    height: calc(100vh - 90px);
+    gap: 15px;
+}
+
+.secao-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 0;
+    gap: 30px;
+}
+
+.img-modelo-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.img-modelo-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+}
+
+.titulo-modelo {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.controles-modelo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.selecao-modelo {
+    margin-left: 100px;
+}
+
+.selecao-modelo select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--prata-metalico);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ano-lancamento h3 {
+    color: var(--vermelho-guards);
+    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.flex-textos {
+    display: flex;
+    gap: 20px;
+    height: 35%;
+    width: 100%;
+}
+
+.card-texto {
+    flex: 1;
+    background-color: white;
+    border: 1px solid var(--prata-metalico);
+    border-radius: 12px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.card-texto h4 {
+    color: var(--preto-profundo);
+    font-size: 0.9rem;
+    border-left: 4px solid var(--dourado-nobre);
+    padding-left: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card-texto p {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
