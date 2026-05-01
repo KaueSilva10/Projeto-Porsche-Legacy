@@ -23,7 +23,6 @@ let listaIntuitos = [
 ];
 
 function mudarModelo() {
-    // 1. Capturamos o valor do select e calculamos o índice (posição na lista)
     let selecao = Number(slct_modelo.value);
     let indice = selecao - 1;
     
