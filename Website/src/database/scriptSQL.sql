@@ -93,3 +93,7 @@ insert into alternativas (texto, correta, fkpergunta) values
 ('911 GT3 RS', 1, 28), ('911 Turbo', 0, 28), ('918 Spyder', 0, 28), ('Cayman', 0, 28),
 ('Taycan', 1, 29), ('Macan Electric', 0, 29), ('Panamera E-Hybrid', 0, 29), ('911 E', 0, 29),
 ('718 Cayman', 1, 30), ('Macan', 0, 30), ('Cayenne', 0, 30), ('Panamera', 0, 30);
+
+select * from usuario;
+
+INSERT INTO usuario (nome, email, senha) VALUES ('teste', 'teste@teste.com', '123456');

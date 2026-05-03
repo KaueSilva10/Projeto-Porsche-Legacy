@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Legacy | Modelos</title>
-    <link rel="stylesheet" href="/assets/navbar.css">
-    <link rel="stylesheet" href="/assets/modelos.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/modelos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 </head>
@@ -39,16 +39,8 @@
             </div>
             <div class="selecao-modelo">
                 <select id="slct_modelo" onchange="mudarModelo()">
-                    <option value="" selected disabled>Escolha o Modelo</option>
-                    <option value="1">Porsche 356</option>
-                    <option value="2">Porsche 911</option>
-                    <option value="3">Porsche 912</option>
-                <option value="4">Porsche 944</option>
-                <option value="5">Porsche 959</option>
-                <option value="6">Porsche Carrera GT</option>
-                <option value="7">Porsche Cayenne</option>
-                <option value="8">Porsche Taycan</option>
-                    </select>
+                    <option value="0" selected disabled>Escolha o Modelo</option>
+                </select>
             </div>
             <div class="ano-lancamento">
                 <h3 id="h3_ano">LANÇAMENTO: XX</h3>
@@ -70,6 +62,6 @@
     </div>
     
 
-    <script src="/assets/modelos.js"></script>
+    <script src="/assets/js/modelos.js"></script>
 </body>
 </html>

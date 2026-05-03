@@ -1,27 +1,35 @@
-let login = false;
-let btnLogin = `<i class="fa-solid fa-circle-user"></i>`;
+function cadastrar() {
+    var nomeVar = ipt_nome.value;
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+    var confirmarSenha = ipt_confirmar.value;
 
-function cadastro() {
-    let nome = document.getElementById('ipt_nome').value;
-    let email = document.getElementById('ipt_email').value;
-    let senha = document.getElementById('ipt_senha').value;
-    let confirmarSenha = document.getElementById('ipt_confirmar').value;
-
-    if (nome == '' || email == '' || senha == '' || confirmarSenha == '') {
+    if (nomeVar == '' || emailVar == '' || senhaVar == '' || confirmarSenha == '') {
         alert('⚠️ Complete todos os campos obrigatórios.');
-    } else if (email.indexOf('@') < 0 || email.indexOf('.com') < 0) {
-        alert('Insira um e-mail válido (deve conter @ e .com).');
-    } else if (senha.length < 6) {
+    } else if (emailVar.indexOf('@') < 0) {
+        alert('Insira um e-mail válido.');
+    } else if (senhaVar.length < 6) {
         alert('A senha deve ter pelo menos 6 caracteres.');
-    } else if (senha != confirmarSenha) {
+    } else if (senhaVar != confirmarSenha) {
         alert('❌ As senhas não coincidem!');
     } else {
-        alert('✅ Cadastro realizado com sucesso!');
-        login = true;
-    }
-
-    if (login) {
-        window.location.href = "login.html";
-        btn_login.innerHTML = btnLogin;
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                alert("✅ Cadastro realizado com sucesso!");
+                window.location = "login.html";
+            } else {
+                alert("Erro ao cadastrar! Verifique se o e-mail já está em uso.");
+            }
+        }).catch(function (erro) {
+            console.log("Erro na requisição: " + erro);
+        });
     }
 }

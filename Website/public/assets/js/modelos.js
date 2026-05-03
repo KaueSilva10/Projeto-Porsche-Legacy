@@ -1,3 +1,4 @@
+let listaNomes = ["Porsche 356", "Porsche 911", "Porsche 912", "Porsche 944", "Porsche 959", "Porsche Carrera GT", "Porsche Cayenne", "Porsche Taycan"];
 let listaImagens = ["1.webp", "2.webp", "3.jpg", "4.jpg", "5.webp", "6.jpg", "7.jpg", "8.webp"];
 let listaAnos = ["1948 - 1965", "1963 - Presente", "1965 - 1969", "1976 - 1991", "1986 - 1993", "2003 - 2007", "2002 - Presente", "2019 - Presente"];
 let listaHistorias = [
@@ -10,7 +11,6 @@ let listaHistorias = [
     "O lançamento mais polêmico da marca. Um SUV que salvou a Porsche da falência e permitiu a continuidade do 911.",
     "O primeiro passo totalmente elétrico da marca, provando que eletricidade e a alma Porsche podem caminhar juntas."
 ];
-
 let listaIntuitos = [
     "Criar um esportivo leve, ágil e eficiente baseado na simplicidade mecânica.",
     "Oferecer um sucessor mais potente e confortável que o 356, sem perder a essência esportiva.",
@@ -21,6 +21,16 @@ let listaIntuitos = [
     "Gerar lucro e volume de vendas para garantir a sobrevivência financeira da fabricante.",
     "Prover desempenho de supercarro com zero emissão de gases."
 ];
+
+function carregarSelect() {
+    let select = document.getElementById("slct_modelo");
+    
+    for (let i = 0; i < listaNomes.length; i++) {
+        select.innerHTML += `<option value="${i + 1}">${listaNomes[i]}</option>`;
+    }
+}
+
+carregarSelect();
 
 function mudarModelo() {
     let selecao = Number(slct_modelo.value);
