@@ -96,4 +96,8 @@ insert into alternativas (texto, correta, fkpergunta) values
 
 select * from usuario;
 
-INSERT INTO usuario (nome, email, senha) VALUES ('teste', 'teste@teste.com', '123456');
+insert into usuario (nome, email, senha) values
+('teste', 'teste@teste.com', '123456');
+
+insert into usuario (nome, email, senha) values
+('Kauê de Oliveira Silva', 'kauesilva@gmail.com', 'kaue123');

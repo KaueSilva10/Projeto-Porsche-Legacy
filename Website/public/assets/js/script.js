@@ -1,35 +1,20 @@
-function cadastrar() {
-    var nomeVar = ipt_nome.value;
-    var emailVar = ipt_email.value;
-    var senhaVar = ipt_senha.value;
-    var confirmarSenha = ipt_confirmar.value;
+function validarSessao() {
+    let liUsuario = document.getElementById("li_usuario");
+    let nome = sessionStorage.NOME_USUARIO;
 
-    if (nomeVar == '' || emailVar == '' || senhaVar == '' || confirmarSenha == '') {
-        alert('⚠️ Complete todos os campos obrigatórios.');
-    } else if (emailVar.indexOf('@') < 0) {
-        alert('Insira um e-mail válido.');
-    } else if (senhaVar.length < 6) {
-        alert('A senha deve ter pelo menos 6 caracteres.');
-    } else if (senhaVar != confirmarSenha) {
-        alert('❌ As senhas não coincidem!');
-    } else {
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            if (resposta.ok) {
-                alert("✅ Cadastro realizado com sucesso!");
-                window.location = "login.html";
-            } else {
-                alert("Erro ao cadastrar! Verifique se o e-mail já está em uso.");
-            }
-        }).catch(function (erro) {
-            console.log("Erro na requisição: " + erro);
-        });
+    if (nome != undefined) {
+        liUsuario.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span style="color: white;">Olá, <b>${nome}</b></span>
+                <button onclick="limparSessao()" class="login" style="background-color: #e30613;">Sair</button>
+            </div>
+        `;
     }
 }
+
+function limparSessao() {
+    sessionStorage.clear();
+    window.location = "index.html";
+}
+
+window.onload = validarSessao;
