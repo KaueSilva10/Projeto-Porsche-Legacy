@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body onload="inicializarGraficon()">
 
     <div class="header">
         <div class="navbar">
@@ -25,14 +25,56 @@
         </div>
     </div>
 
-    <div class="container-quiz">
-        <div class="content-quiz">
-            <h3>Descubra se você conhece mesmo a <span style="color: #BA122B;">Porsche</span></h3>
-            
+    <div class="quiz-container">
+    <div class="quiz-header">
+        <h1>Porsche Quiz</h1>
+        <div id="progresso-container">
+            <div id="barra-progresso"></div>
         </div>
     </div>
-    
 
+    <div id="jogo">
+        <h2 id="pergunta">Carregando pergunta...</h2>
+        
+        <div class="alternativas-container">
+            <button class="btn-alternativa" data-number="1">Alternativa 1</button>
+            <button class="btn-alternativa" data-number="2">Alternativa 2</button>
+            <button class="btn-alternativa" data-number="3">Alternativa 3</button>
+            <button class="btn-alternativa" data-number="4">Alternativa 4</button>
+        </div>
+    </div>
+
+    <div class="quiz-footer">
+        <p id="contador-questoes">Questão 1 de 10</p>
+    </div>
+    </div>
+
+    <div class="dashboard-container">
+        <h2>Estatísticas de Desempenho</h2>
+    
+        <div class="kpi-group">
+            <div class="kpi-card">
+                <span class="kpi-texto">Questões feitas</span>
+                <span id="kpi-total" class="kpi-valor">0</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-texto">Acertos</span>
+                <span id="kpi-acertos" class="kpi-valor acerto">0</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-texto">Erros</span>
+                <span id="kpi-erros" class="kpi-valor erro">0</span>
+            </div>
+        </div>
+
+        <div id="resultado-quiz" style="display: none;">
+            <h2>Seu Desempenho:</h2>
+            <canvas id="myChartCanvas"></canvas>
+            <button onclick="window.location.reload()">Refazer Quiz</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
     <script src="/assets/js/quiz.js"></script>
     <script src="/assets/js/script.js"></script>
 </body>
